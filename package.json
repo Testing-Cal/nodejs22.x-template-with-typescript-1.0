@@ -1,0 +1,59 @@
+{
+  "name": "nodejs-template-typescript-1.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./src/app.ts",
+    "test": "jest --config=jest.config.js",
+    "test:cov": "jest --config=jest.config.js --coverage",
+    "build": "npx tsc",
+    "sonar": "sonar-scanner"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.0.2",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "sonarqube-scanner": "^4.0.1",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.4",
+    "http-server": "^14.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.8",
+    "nodemon": "^3.1.4",
+    "jest": "^29.7.0",
+    "sonarqube-scanner": "^4.0.1",
+    "ts-jest": "^29.2.3"
+  },
+   "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "jestSonar": {
+    "reportPath": ".",
+    "reportFile": "sonar-report.xml",
+    "indent": 4
+  }
+}
+
+
