@@ -17,6 +17,6 @@ RUN npm install
 
 # add app
 COPY src ./src
-
+COPY tsconfig.json ./
 # start app
 CMD ["ts-node", "./src/app.ts"]
